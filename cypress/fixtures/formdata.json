@@ -5,5 +5,12 @@
     "incidents": "Crash",
     "registration": "3201336B",
     "mileage": "9000",
-    "estvalue": "5000"
+    "estvalue": "5000",
+    "edituname": "Ramukaka",
+    "editfname": "Shyamukaka",
+    "editphone": "01525903",
+    "editstreet": "this street 1011",
+    "editcity": "Bajhang",
+    "editcountry": "China",
+    "edipostcode": "41+345743"
 }
