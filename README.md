@@ -1,6 +1,6 @@
 # Instrustions:
 - To run the cypress automation tests you need to have following things on your device:
-- `NPM` and `Cypress` should be installed along with an `IDE` (Most preferabbly Visual Studio Code)
+- `NPM` and `Cypress` should be installed along with an `IDE` (most preferabbly Visual Studio Code)
 
 - After the prerequisites are met, open your IDE
 - Click on the `file` option on the top right of the menu bar
