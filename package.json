@@ -1,0 +1,19 @@
+{
+  "name": "cypro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testing",
+    "cytest": "Cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "testing"
+  ],
+  "author": "Nitish Man Shrestha",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.5.1"
+  }
+}
