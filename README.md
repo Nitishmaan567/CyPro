@@ -8,10 +8,13 @@
 - Select `Open Folder` and navigate till the folder that has your tests
 - Now navigate till the `terminal` tab on the top of your IDE click on it
 - Select the `New terminal` option
-- Within the terminal hit `npm run cytest` to open cypress test runner
-- You will see a modal that has to options select `e2e testing` option in the modal
-- Select a browser
-- Now within the spec folders select whichever spec file you want to run and test
+- Within the terminal hit `npx cypress run` to start the execution of the spec files within the spec folder
+- Wait until all the spec files are run
+- Navigate till the explorer on the left side of your IDE
+- Search for the `Report` folder within the explorer panel
+- Right click on the `index.html` file that is within the reports folder and select `Copy relative path` option
+- Paste the path into the search bar of your web browser
+- Hit enter to see the test report in HTML format
 
 **Note:  You need to hit `npm run cytest` on the terminal evertime to start the cypress runner and for you to be able to execute your spec files**
 
