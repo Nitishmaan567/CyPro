@@ -1,4 +1,4 @@
-# Instrustions:
+# Instrustions to run the test:
 - To run the cypress automation tests you need to have following things on your device:
 - `NPM` and `Cypress` should be installed along with an `IDE` (most preferabbly Visual Studio Code)
 
@@ -11,12 +11,10 @@
 - Within the terminal hit `npx cypress run` to start the execution of the spec files within the spec folder
 - Wait until all the spec files are run
 - Navigate till the explorer on the left side of your IDE
-- Search for the `Report` folder within the explorer panel
+- Search for the `reports` folder within the explorer panel
 - Right click on the `index.html` file that is within the reports folder and select `Copy relative path` option
 - Paste the path into the search bar of your web browser
 - Hit enter to see the test report in HTML format
-
-**Note:  You need to hit `npm run cytest` on the terminal evertime to start the cypress runner and for you to be able to execute your spec files**
 
 
 Happy Testing!
