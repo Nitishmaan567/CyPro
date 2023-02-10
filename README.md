@@ -12,7 +12,7 @@
 - Wait until all the spec files are run
 - Navigate till the explorer on the left side of your IDE
 - Search for the `reports` folder within the explorer panel
-- Right click on the `index.html` file that is within the reports folder and select `Copy relative path` option
+- Right click on the `index.html` file that is within the reports folder and select `Copy path` option
 - Paste the path into the search bar of your web browser
 - Hit enter to see the test report in HTML format
 
