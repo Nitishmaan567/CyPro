@@ -11,7 +11,7 @@ describe("Verifying Logging in scenarios", function () {
             })
     })
     //Login success scenario
-    it.only("Logging in with valid credentials", () => {
+    it("Logging in with valid credentials", () => {
         ref.setEmail(this.data.email);
         ref.setPassword(this.data.password);
         ref.loginButton();
@@ -24,6 +24,7 @@ describe("Verifying Logging in scenarios", function () {
         ref.setEmail(this.data.invalidData);
         ref.setPassword(this.data.invalidData);
         ref.loginButton();
+        cy.wait(3000);
         cy.title().should("eq", "Insurance Broker System - Login");
         ref.errorMsg();
     })
@@ -33,6 +34,7 @@ describe("Verifying Logging in scenarios", function () {
         ref.setEmail(this.data.invalidData);
         ref.setPassword(this.data.password);
         ref.loginButton();
+        cy.wait(3000);
         cy.title().should("eq", "Insurance Broker System - Login")
         ref.errorMsg();
     })
@@ -42,6 +44,7 @@ describe("Verifying Logging in scenarios", function () {
         ref.setEmail(this.data.email);
         ref.setPassword(this.data.invalidData);
         ref.loginButton();
+        cy.wait(3000);
         cy.title().should("eq", "Insurance Broker System - Login");
         ref.errorMsg();
     })
@@ -52,6 +55,7 @@ describe("Verifying Logging in scenarios", function () {
     it("hitting log in button without providing credentials", () => {
         ref.loginButton();
         ref.errorMsg();
+        //This will fail because there is no validation for this scenario
     })
 
 })

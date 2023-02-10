@@ -1,7 +1,7 @@
 ///<reference types = 'cypress'/>
 import proPom from "../../PageObject/proPom";
 
-describe("Request Quotation", function () {
+describe("Request Quotation from request quotation tab", function () {
     let ref = new proPom();
     beforeEach(() => {
         cy.fixture('formdata')
@@ -64,7 +64,7 @@ describe("Request Quotation", function () {
         //Asserting premium
         cy.get("#calculatedpremium")
             .should('have.text', 'No discountPremium: £130');
-        cy.wait(6000);
+        cy.wait(2000);
         //reseting the form
         cy.get("#resetquote").click();
     });

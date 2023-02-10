@@ -15,12 +15,12 @@ describe("Retrive Quotation", function () {
                 ref.loginButton();
                 cy.title().should("eq", "Insurance Broker System");
                 cy.get(".content > h4").should("have.text", this.data.email)
-                //navigating to the request Quotation tab
+                //navigating to the retreive Quotation tab
                 proRef.retreiveQuote();
             });
     })
 
-    it("Inputing the Quotation ID", function () {
+    it("Inputing the Quotation ID from retreive quotation tab", function () {
         proRef.getIdInput();
         proRef.getQuoteButton();
         proRef.getTable();

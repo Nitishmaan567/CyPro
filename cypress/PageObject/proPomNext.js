@@ -129,4 +129,73 @@ export default class proPomNext {
             .click();
     }
 
+    getProfile() {
+        cy.get("#ui-id-4")
+            .click();
+    }
+
+    getCountOfElementsInsideProfile() {
+        cy.get("div[id='tabs-4']").find('h5').should('have.length', 8);
+    }
+
+    verifyProfileDataExisits() {
+        cy.get("div[id='tabs-4']").find('h5')
+            .each((ele, index, list) => {
+                cy.wrap(ele.text()).should("not.be.empty").and("not.be.null")
+            })
+    }
+
+    getProfileTitle() {
+        cy.get("#showtitle")
+            .should("have.text", "Captain")
+    }
+
+    getProfileUserName() {
+        cy.get('#showfirstname')
+            .should("have.text", "Ramukaka");
+    }
+
+    getProfileSurname() {
+        cy.get('#showsurname')
+            .should("have.text", "Shyamukaka");
+    }
+
+    getProfilePhone() {
+        cy.get('#showphone')
+            .should("have.text", "01525903");
+    }
+
+    getProfileDOB() {
+        cy.get('#showdateofbirth')
+            .should("have.text", "1936-07-16");
+    }
+
+    getProfileLicensePeriod() {
+        cy.get('#showlicenceperiod')
+            .should("have.text", "20");
+    }
+
+    getProfileOccupation() {
+        cy.get('#showoccupation')
+            .should("have.text", "Casino Dealer");
+    }
+
+    getProfileIncident() {
+        cy.get('#showincidents')
+            .should("have.text", "Crash");
+    }
+
+    getProfileAddress() {
+        cy.get('#showstreet')
+            .should("have.text", "this street 1011");
+        cy.get('#showcity')
+            .should("have.text", "Bajhang");
+        cy.get('#showcountry')
+            .should("have.text", "China");
+        cy.get('#showpostcode')
+            .should("have.text", "41+345743");
+    }
+
+
+
 }

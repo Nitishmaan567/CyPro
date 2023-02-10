@@ -15,12 +15,13 @@ describe("User Profile editing and viewing", function () {
                 ref.loginButton();
                 cy.title().should("eq", "Insurance Broker System");
                 cy.get(".content > h4").should("have.text", this.data.email)
-                //navigating to the request Quotation tab
-                proRef.getEditProfile();
+
             });
     })
 
-    it("Editing profile", () => {
+    it("Editing profile details using the edit profile tab", () => {
+        //navigating to the Edit Profile tab
+        proRef.getEditProfile();
         proRef.verifyEditProfilepage();
         proRef.setEditTitle();
         proRef.setEditUserName(this.data.edituname);
@@ -35,8 +36,41 @@ describe("User Profile editing and viewing", function () {
         proRef.setEditCity(this.data.editcity);
         proRef.setEditCountry(this.data.editcountry);
         proRef.setEditPostcode(this.data.edipostcode);
-        console.log(proRef.updateUserProfile());
+        proRef.updateUserProfile();
+    })
 
+    it("Checking the data present in the profile tab", () => {
+        //navigating to the Edit Profile tab
+        proRef.getEditProfile();
+        proRef.verifyEditProfilepage();
+        proRef.setEditTitle();
+        proRef.setEditUserName(this.data.edituname);
+        proRef.setEditFirstName(this.data.editfname);
+        proRef.setEditPhoneNumber(this.data.editphone);
+        proRef.setEditYear();
+        proRef.setEditMonth();
+        proRef.setEditDay();
+        proRef.setEditLicensePeriod();
+        proRef.setEditOccupation();
+        proRef.SetEditStreet(this.data.editstreet);
+        proRef.setEditCity(this.data.editcity);
+        proRef.setEditCountry(this.data.editcountry);
+        proRef.setEditPostcode(this.data.edipostcode);
+        proRef.updateUserProfile();
+        //navigating to the profile tab
+        //This is expected to fail since the h5 values are not displayed
+        proRef.getProfile();
+        proRef.getCountOfElementsInsideProfile();
+        proRef.verifyProfileDataExisits();
+        proRef.getProfileTitle();
+        proRef.getProfileUserName();
+        proRef.getProfileSurname();
+        proRef.getProfilePhone();
+        proRef.getProfileDOB();
+        proRef.getProfileLicensePeriod();
+        proRef.getProfileOccupation();
+        proRef.getProfileIncident();
+        proRef.getProfileAddress();
     })
 
 })
