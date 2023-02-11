@@ -19,5 +19,11 @@
 - Paste the path into the search bar of your web browser
 - Hit enter to see the test report in HTML format
 
+# Expected Results:
+- Total no of test cases: 12
+- No. of test cases expected to pass: 10
+- No. of test cases expected to fail(Negative testing): 2
+
+
 
 Happy Testing!
