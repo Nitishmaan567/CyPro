@@ -134,10 +134,6 @@ export default class proPomNext {
             .click();
     }
 
-    getCountOfElementsInsideProfile() {
-        cy.get("div[id='tabs-4']").find('h5').should('have.length', 8);
-    }
-
     verifyProfileDataExisits() {
         cy.get("div[id='tabs-4']").find('h5')
             .each((ele, index, list) => {

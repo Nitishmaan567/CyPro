@@ -23,10 +23,14 @@ export default class proPom {
     }
     //Pro-main ends
 
-    //Pro-afterlogin starts
+    //Pro-request Quotation starts
     getReqQuote() {
         cy.get("#ui-id-2")
             .click();
+    }
+
+    getRequestQuotationHeading() {
+        cy.get("div[id='tabs-2'] h2").should("have.text", "Request a quotation")
     }
 
     breakdownSelect() {
@@ -58,7 +62,6 @@ export default class proPom {
     setEstValue(estval) {
         cy.get("input[id= 'quotation_vehicle_attributes_value']")
             .type(estval);
-
     }
 
     setParkingLocation() {
@@ -94,5 +97,5 @@ export default class proPom {
         cy.get("input[value='Save Quotation']")
             .click();
     }
-    //Pro-afterlogin ends
+    //Pro-requestquotation ends
 }

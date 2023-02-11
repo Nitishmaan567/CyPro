@@ -15,6 +15,8 @@ describe("Request Quotation from request quotation tab", function () {
                 cy.get(".content > h4").should("have.text", this.data.email)
                 //navigating to the request Quotation tab
                 ref.getReqQuote();
+                //verifying that we are in the request quotation page
+                ref.getRequestQuotationHeading();
             });
     })
 

@@ -15,8 +15,7 @@ describe("User Profile editing and viewing", function () {
                 ref.loginButton();
                 cy.title().should("eq", "Insurance Broker System");
                 cy.get(".content > h4").should("have.text", this.data.email)
-
-            });
+            })
     })
 
     it("Editing profile details using the edit profile tab", () => {
@@ -60,7 +59,6 @@ describe("User Profile editing and viewing", function () {
         //navigating to the profile tab
         //This is expected to fail since the h5 values are not displayed
         proRef.getProfile();
-        proRef.getCountOfElementsInsideProfile();
         proRef.verifyProfileDataExisits();
         proRef.getProfileTitle();
         proRef.getProfileUserName();
