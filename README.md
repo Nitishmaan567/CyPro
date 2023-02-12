@@ -22,9 +22,11 @@
 - Hit enter to see the test report in HTML format
 
 # Expected Results:
-- Total no of test cases: 12
-- No. of test cases expected to pass: 10
+- Total no of test cases: 14
+- No. of test cases expected to pass: 12
 - No. of test cases expected to fail(Negative testing): 2
+- We expect the last test cases of both pro-main.cy.js and pro-profile.cy.js to fail
+- In case of page not loading errors please re-run the test cases
 
 
 
