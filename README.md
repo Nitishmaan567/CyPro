@@ -9,7 +9,11 @@
 - Select `Open Folder` and navigate till the folder that has your tests
 - Now navigate till the `terminal` tab on the top of your IDE click on it
 - Select the `New terminal` option
-- If you want to execute each spec file individually then within the terminal hit `npx cypress run --spec cypress\e2e\Specs\{filename}.cy.js`
+- If you want to execute each spec file individually then within the terminal hit following commands for following spec files:
+    -  Pro-main file: `npx cypress run --headed --spec cypress\e2e\Specs\Pro-main.cy.js --browser chrome`
+    -  Pro-profile file: `npx cypress run --headed --spec cypress\e2e\Specs\Pro-profile.cy.js --browser chrome`
+    -  Pro-requestquotation file: `npx cypress run --headed --spec cypress\e2e\Specs\Pro-requestquotation.cy.js --browser chrome`
+    -  Pro-retrievequotation file: `npx cypress run --headed --spec cypress\e2e\Specs\Pro-retreivequotation.cy.js --browser chrome` 
 - Or if you want to execute all of the files at once then within the terminal hit `npx cypress run` to start the headless execution of the spec files within the spec folder
 
 
