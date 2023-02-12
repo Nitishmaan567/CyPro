@@ -20,10 +20,25 @@ describe("Retrive Quotation", function () {
             });
     })
 
-    it("Inputing the Quotation ID from retreive quotation tab", function () {
+    it("Verifying the quotation data for a specific quotation ID", function () {
         proRef.getIdInput();
         proRef.getQuoteButton();
         proRef.getTable();
         proRef.assertTableValue();
+    })
+
+    it("Clicking the retreive button without any quotation ID", function () {
+        proRef.getQuoteButton();
+        //asserts that clicking the retrieve button 
+        //without inputing any value navigates user back to the home tab
+        proRef.getAriaSelectedFlag();
+        proRef.getHomeHeading();
+
+    })
+
+    it("Trying to retrieve quotation using a non-existent id", function () {
+        proRef.setNonexistentQuotationID();
+        proRef.getQuoteButton();
+        proRef.checkQuotationErrorMessage();
     })
 })

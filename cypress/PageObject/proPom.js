@@ -1,7 +1,10 @@
 export default class proPom {
     //Pro-main starts
     visit() {
+        cy.intercept("https://demo.guru99.com/insurance/v1/index.php")
+            .as("indexLoaded");
         cy.visit("https://demo.guru99.com/insurance/v1/index.php");
+        cy.wait("@indexLoaded");
     }
 
     setEmail(eml) {
@@ -12,9 +15,17 @@ export default class proPom {
         cy.get("#password").type(pw);
     }
 
-    loginButton() {
+    loginButtonforInvalids() {
         cy.get("input[value='Log in']")
             .click();
+    }
+
+    loginButton() {
+        cy.intercept("https://demo.guru99.com/insurance/v1/header.php")
+            .as("headerLoaded");
+        cy.get("input[value='Log in']")
+            .click();
+        cy.wait("@headerLoaded");
     }
 
     errorMsg() {

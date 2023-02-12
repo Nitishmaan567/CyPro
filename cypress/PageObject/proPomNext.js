@@ -9,9 +9,18 @@ export default class proPomNext {
         cy.get("input[placeholder='identification number']")
             .type(21710);
     }
+    setNonexistentQuotationID() {
+        cy.get("input[placeholder='identification number']")
+            .type(77777777777777777777745);
+    }
+
+    checkQuotationErrorMessage() {
+        cy.get('body > b')
+            .should("have.text", "Wrong Retrieve Quotation ID. Please Check...");
+    }
 
     getQuoteButton() {
-        cy.get('#getquote').click();
+        cy.get('#getquote').click(8000);
     }
 
     getTable() {
@@ -192,6 +201,14 @@ export default class proPomNext {
             .should("have.text", "41+345743");
     }
 
+    getAriaSelectedFlag() {
+        cy.get("#home")
+            .should("have.attr", "aria-selected", "true")
+    }
 
+    getHomeHeading() {
+        cy.get("div[id='tabs-1'] h2")
+            .should("have.text", "Broker Insurance WebPage")
+    }
 
 }

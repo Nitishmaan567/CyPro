@@ -6,6 +6,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       screenshotOnRunFailure: true;
+      pageLoadTimeout: 15000;
       require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
