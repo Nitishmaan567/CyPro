@@ -28,8 +28,7 @@
 # Expected Results:
 - Total no of test cases: 14
 - No. of test cases expected to pass: 12
-- No. of test cases expected to fail(Negative testing): 2
-- We expect the last test cases of both `pro-main.cy.js` and `pro-profile.cy.js` to fail
+- No. of test cases expected to fail(Negative testing): 2 (We expect the last test cases of both `pro-main.cy.js` and `pro-profile.cy.js` to fail)
 - In case of page not loading errors, response time error, please check your internet connection and re-run the test cases 
 
 
