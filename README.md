@@ -14,7 +14,7 @@
     -  Pro-profile file: `npx cypress run --headed --spec cypress\e2e\Specs\Pro-profile.cy.js --browser chrome`
     -  Pro-requestquotation file: `npx cypress run --headed --spec cypress\e2e\Specs\Pro-requestquotation.cy.js --browser chrome`
     -  Pro-retrievequotation file: `npx cypress run --headed --spec cypress\e2e\Specs\Pro-retreivequotation.cy.js --browser chrome` 
-- Or if you want to execute all of the files at once then within the terminal hit `npx cypress run` to start the headless execution of the spec files within the spec folder
+- Or if you want to execute all of the files at once then within the terminal hit `npx cypress run` to start the headless execution of the spec files
 
 
 # How to view the report:
@@ -30,7 +30,7 @@
 - No. of test cases expected to pass: 12
 - No. of test cases expected to fail(Negative testing): 2
 - We expect the last test cases of both `pro-main.cy.js` and `pro-profile.cy.js` to fail
-- In case of page not loading errors please re-run the test cases
+- In case of page not loading errors, response time error, please check your internet connection and re-run the test cases 
 
 
 
